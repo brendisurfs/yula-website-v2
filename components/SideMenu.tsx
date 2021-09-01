@@ -14,18 +14,15 @@ import {
 import Link from "next/link";
 import PageLink from "./PageLink";
 const SideMenu = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const { toggleColorMode } = useColorMode();
+  const linkTabs = ["home", "music", "schedule", "about"];
+
+  // const { isOpen, onOpen, onClose } = useDisclosure();
+  // const { toggleColorMode } = useColorMode();
 
   return (
-    <ChakraProvider>
-      <meta name="website" content="yula.com"></meta>
-      <meta
-        name="description"
-        content="Website for electronic musician Yula."
-      ></meta>
+    <div>
       {/* HEADER DISPLAY STARTS HERE */}
-      <Menu>
+      <Menu isLazy colorScheme="blackAlpha">
         <MenuButton
           rounded={0}
           as={IconButton}
@@ -33,19 +30,17 @@ const SideMenu = () => {
           icon={<HamburgerIcon />}
           variant="normal"
         />
-        <MenuList backgroundColor="rgb(24,24,24)" borderColor="rgb(24,24,24)">
-          <MenuItem>
-            <PageLink pageRoute="/" text="home" />
-          </MenuItem>
-          <MenuItem>
-            <PageLink pageRoute="/music" text="music" />
-          </MenuItem>
-          <MenuItem>
-            <PageLink pageRoute="/about" text="about" />
-          </MenuItem>
+        <MenuList
+          alignItems="right"
+          backgroundColor="rgb(24,24,24)"
+          borderColor="rgb(24,24,24)"
+        >
+          {linkTabs.map((item) => (
+            <MenuItem _focus={{ color: "black" }}>{item}</MenuItem>
+          ))}
         </MenuList>
       </Menu>
-    </ChakraProvider>
+    </div>
   );
 };
 

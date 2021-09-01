@@ -1,8 +1,13 @@
 import { List, ListItem } from "@chakra-ui/react";
 import { GetStaticProps } from "next";
-import Layout from "../components/Layout";
 
-type Show = {
+//COMPONENTs
+//	|
+//	v
+import Layout from "../components/Layout";
+import EventItem from "../components/EventItem";
+
+export type Show = {
   id: number;
   Show_Dates: string;
   Show_Desc: string;
@@ -25,7 +30,7 @@ const SchedulePage = ({ events }: EventMap) => {
     <Layout>
       <div>
         {events.map((show: Show) => (
-          <h3 key={show.id}>{show.Show_Title}</h3>
+          <EventItem evt={show} key={show.id}></EventItem>
         ))}
       </div>
     </Layout>

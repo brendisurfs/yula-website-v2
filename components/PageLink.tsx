@@ -10,7 +10,7 @@ type LinkProps = {
 const PageLink = (props: LinkProps) => {
   return (
     <ChakraProvider>
-      <Box fontSize="18">
+      <Box fontWeight="hairline" textTransform="uppercase" fontSize="16">
         <Link href={props.pageRoute}>{props.text}</Link>
       </Box>
     </ChakraProvider>

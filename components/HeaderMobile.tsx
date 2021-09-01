@@ -19,7 +19,7 @@ const HeaderMobile = () => {
         borderColor="black"
         m={0}
         p={4}
-        backgroundColor="rgb(12,12,12)"
+        backgroundColor="#000000"
         color="ivory"
         fontSize="24"
         fontStyle="bold"
