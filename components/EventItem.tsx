@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Show } from "../pages/schedule";
 import { ReactElement } from "react";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
 
 interface EvtType {
   key: number;
@@ -11,12 +11,19 @@ interface EvtType {
 
 export default function EventItem({ key, evt }: EvtType) {
   return (
-    <Flex background="black" color="white">
-      <Box p={4} align="center" textAlign="center" key={key}>
-        <Text fontWeight="bold">{evt.Show_Title}</Text>
-        <h4>{evt.Show_Desc}</h4>
-        {/* <Link key={evt.id} href="_" /> */}
-      </Box>
-    </Flex>
+    <GridItem
+      background="black"
+      color="ivory"
+      p={4}
+      textAlign="left"
+      className={evt.Show_Title}
+      key={key}
+    >
+      <Text fontSize={24} fontWeight="bold">
+        {evt.Show_Title}
+      </Text>
+      <p>{evt.Show_Desc}</p>
+      {/* <Link key={evt.id} href="_" /> */}
+    </GridItem>
   );
 }

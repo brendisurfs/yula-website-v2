@@ -18,7 +18,7 @@ const SideMenu = () => {
 
   // const { isOpen, onOpen, onClose } = useDisclosure();
   // const { toggleColorMode } = useColorMode();
-
+  let count = 0;
   return (
     <div>
       {/* HEADER DISPLAY STARTS HERE */}
@@ -31,12 +31,20 @@ const SideMenu = () => {
           variant="normal"
         />
         <MenuList
+          borderRadius={0}
           alignItems="right"
           backgroundColor="rgb(24,24,24)"
           borderColor="rgb(24,24,24)"
         >
           {linkTabs.map((item) => (
-            <MenuItem _focus={{ color: "black" }}>{item}</MenuItem>
+            <MenuItem
+              fontWeight="hairline"
+              fontSize={18}
+              key={(count += 1)}
+              _focus={{ color: "orange" }}
+            >
+              {item}
+            </MenuItem>
           ))}
         </MenuList>
       </Menu>

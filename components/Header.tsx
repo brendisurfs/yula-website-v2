@@ -20,14 +20,7 @@ const Header = () => {
 
       {/* HEADER DISPLAY STARTS HERE */}
       <div className="desktop-menu">
-        <Heading
-          backgroundColor="black"
-          color="ivory"
-          p={6}
-          m={0}
-          title="yula"
-          justifyContent="space-between"
-        >
+        <Heading backgroundColor="black" color="ivory" p={6} m={0} title="yula">
           <Flex justifyContent="space-between">
             <Grid
               alignItems="center"
@@ -36,15 +29,27 @@ const Header = () => {
               gridTemplateColumns="repeat(5, 1fr)"
               className="left"
               left={0}
+              fontSize={48}
             >
-              <Link href="/">Yula</Link>
-              <p>|</p>
-              <PageLink pageRoute="/music" text="Music"></PageLink>
-              <PageLink pageRoute="/schedule" text="Schedule"></PageLink>
-              <PageLink pageRoute="/about" text="About"></PageLink>
+              <div className="page-link">
+                <Link href="/">Yula</Link>
+              </div>
+              {/* <p>|</p> */}
             </Grid>
             <div className="right">
-              <Button
+              <Grid
+                p={2}
+                alignItems="center"
+                textAlign="center"
+                // gridTemplateColumns="repeat(4,1fr)"
+                justifySelf="space-around"
+              >
+                <PageLink pageRoute="/music" text="Music"></PageLink>
+                <PageLink pageRoute="/schedule" text="Schedule"></PageLink>
+                <PageLink pageRoute="/about" text="About"></PageLink>
+                <PageLink pageRoute="/contact" text="Contact"></PageLink>
+              </Grid>
+              {/* <Button
                 onClick={onOpen}
                 rounded={0}
                 variant="normal"
@@ -52,7 +57,7 @@ const Header = () => {
                 // fontWeight="light"
               >
                 Log In
-              </Button>
+              </Button> */}
             </div>
           </Flex>
         </Heading>

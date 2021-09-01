@@ -1,4 +1,4 @@
-import { List, ListItem } from "@chakra-ui/react";
+import { Box, Flex, Grid, List, ListItem } from "@chakra-ui/react";
 import { GetStaticProps } from "next";
 
 //COMPONENTs
@@ -28,11 +28,13 @@ const SchedulePage = ({ events }: EventMap) => {
   });
   return (
     <Layout>
-      <div>
-        {events.map((show: Show) => (
-          <EventItem evt={show} key={show.id}></EventItem>
-        ))}
-      </div>
+      <Box alignItems="center">
+        <Grid gridTemplateRow="repeat(4,1fr)" alignItems="center">
+          {events.map((show: Show) => (
+            <EventItem evt={show} key={show.id}></EventItem>
+          ))}
+        </Grid>
+      </Box>
     </Layout>
   );
 };

@@ -1,5 +1,4 @@
 import { Box, ChakraProvider, Flex, Text } from "@chakra-ui/react";
-import TextSection from "../components/TextSection";
 import _Layout from "../components/Layout";
 import Layout from "../components/Layout";
 import { GetStaticProps } from "next";
@@ -16,16 +15,17 @@ type Info = {
   aboutInfo: AboutType;
 };
 
-const AboutPage = ({ aboutInfo }: Info) => {
+const AboutPage = ({ aboutInfo }: Info, { pics }) => {
   const aboutText = aboutInfo.About;
+  console.log(pics);
   return (
     <Layout>
       <Flex flexDir="column" background="black" color="ivory">
         <Box alignSelf="center" width="30em" m={10}>
-          <Box p={2} fontSize={72}>
+          <Box textTransform="uppercase" p={2} fontSize={72}>
             About
           </Box>
-          <p>{aboutText}</p>
+          <Text lineHeight={2}>{aboutText}</Text>
         </Box>
         <Box alignSelf="center" m={4} className="image">
           <p>AN IMAGE WILL GO HERE</p>

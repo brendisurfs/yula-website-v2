@@ -10,7 +10,7 @@ export default function Model(props) {
   // useFrame((state, delta) => (mesh.current.rotation.x += 0.01));
   const group = useRef();
   const { nodes, materials } = useGLTF("/testing_yulaLogo.gltf");
-  useFrame((state, delta) => (group.current.rotation.y += 0.0025));
+  useFrame((state, delta) => (group.current.rotation.y += 0.001));
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh

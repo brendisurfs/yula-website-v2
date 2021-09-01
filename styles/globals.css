@@ -5,6 +5,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: black;
 }
 
 a {
@@ -29,4 +30,9 @@ a {
   .desktop-menu {
     display: none;
   }
+}
+
+.page-link:hover {
+  transition: ease-in 0.3s;
+  color: orange;
 }
