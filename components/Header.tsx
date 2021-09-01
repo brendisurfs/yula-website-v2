@@ -1,15 +1,4 @@
-import {
-  ChakraProvider,
-  useDisclosure,
-  Button,
-  Flex,
-  Heading,
-  UseDisclosureProps,
-  Box,
-  Grid,
-  GridItem,
-  useColorMode,
-} from "@chakra-ui/react";
+import { useDisclosure, Button, Flex, Heading, Grid } from "@chakra-ui/react";
 import Link from "next/link";
 
 //CUSTOM COMPONENTS:
@@ -20,7 +9,6 @@ import LoginCard from "./LoginCard";
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { toggleColorMode } = useColorMode();
 
   return (
     <div>
