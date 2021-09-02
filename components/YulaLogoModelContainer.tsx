@@ -83,7 +83,6 @@ const YulaLogoModelContainer = () => {
                         autoRotateSpeed={0.1}
                         enableZoom={false}
                     ></OrbitControls>
-                    {/* <CameraShake {...config} /> */}
                 </Canvas>
             </Flex>
         </div>
