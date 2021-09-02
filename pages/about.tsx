@@ -3,8 +3,9 @@ import _Layout from "../components/Layout";
 import Layout from "../components/Layout";
 import { GetStaticProps } from "next";
 import TextGL from "../components/WebGLComponents/TextGL";
-import Model from "../components/WebGLComponents/webgl_deps/TestScene";
+import Model from "../components/WebGLComponents/webgl_deps/Test-gltf-scene";
 import { Canvas } from "@react-three/fiber";
+import { PointLight } from "three";
 interface AboutType {
     id: number;
     About: string;

@@ -4,10 +4,12 @@ import {
     Plane,
     Text,
     OrbitControls,
+    Reflector,
 } from "@react-three/drei";
 import React, { ReactElement } from "react";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
+
 interface ReactChildType {
     children: ReactElement | ReactElement[] | string;
 }
@@ -28,7 +30,7 @@ function TextGL({ children }: ReactChildType) {
                 lineHeight={1}
                 letterSpacing={0.04}
                 textAlign={"center"}
-                color="white"
+                color="black"
                 scale={0.02}
                 // anchorX="center"
                 // anchorY="middle"
@@ -41,7 +43,9 @@ function TextGL({ children }: ReactChildType) {
                 minAzimuthAngle={-Math.PI / 4}
                 maxAzimuthAngle={Math.PI / 4}
                 enableZoom={false}
+                enablePan={false}
             />
+            <Plane scale={5} position={new THREE.Vector3(0, 0, -0.3)} />
         </Canvas>
     );
 }
