@@ -78,6 +78,7 @@ const YulaLogoModelContainer = () => {
                     </EffectComposer>
 
                     <OrbitControls
+                        enablePan={false}
                         autoRotate
                         autoRotateSpeed={0.1}
                         enableZoom={false}

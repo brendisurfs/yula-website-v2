@@ -28,8 +28,12 @@ const SchedulePage = ({ events }: EventMap) => {
     });
     return (
         <Layout>
-            <Box alignItems="center">
-                <Grid gridTemplateRows="repeat(4,1fr)" alignItems="center">
+            <Box background="black" alignItems="center">
+                <Grid
+                    p={16}
+                    gridTemplateRows="repeat(4,1fr)"
+                    alignItems="center"
+                >
                     {events.map((show: Show) => (
                         <EventItem evt={show} key={show.id}></EventItem>
                     ))}
