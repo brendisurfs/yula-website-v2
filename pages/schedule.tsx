@@ -24,9 +24,6 @@ type EventMap = {
 };
 
 const SchedulePage = ({ events }: EventMap) => {
-    events.map((show: Show) => {
-        console.log(show.Show_Date);
-    });
     return (
         <Layout>
             <Box background="black" alignItems="center">

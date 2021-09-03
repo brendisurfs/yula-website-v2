@@ -20,7 +20,6 @@ type Info = {
 
 const AboutPage = ({ aboutInfo }: Info, { pics }) => {
     const aboutText = aboutInfo.About;
-    console.log(pics);
     return (
         <Layout>
             <TextGL>{aboutText}</TextGL>

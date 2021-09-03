@@ -14,14 +14,13 @@ import { Flex } from "@chakra-ui/react";
 import {
     Bloom,
     EffectComposer,
-    Noise,
     Vignette,
-    Glitch,
     ChromaticAberration,
 } from "@react-three/postprocessing";
+import { Vector3 } from "three";
 
 const tjsc = new THREE.Color("#010101");
-const chromaOffset = new THREE.Vector2(0.001, 0.0012);
+const chromaOffset = new THREE.Vector2(0.0007, 0.0015);
 
 const config = {
     maxYaw: 0.04, // Max amount camera can yaw in either direction
@@ -62,10 +61,6 @@ const YulaLogoModelContainer = () => {
                     </Suspense>
 
                     <EffectComposer>
-                        <Glitch
-                            strength={new THREE.Vector2(0.001, 0.1)}
-                            duration={new THREE.Vector2(0.2)}
-                        />
                         <ChromaticAberration offset={chromaOffset} />
                         <Bloom
                             luminanceThreshold={0.01}
@@ -73,14 +68,14 @@ const YulaLogoModelContainer = () => {
                             height={800}
                             opacity={0.3}
                         />
-                        <Stars radius={100} saturation={1} count={1000} />
+                        <Stars radius={100} saturation={1} count={3000} />
                         <Vignette eskil={false} offset={0} darkness={1.4} />
                     </EffectComposer>
 
                     <OrbitControls
                         enablePan={false}
                         autoRotate
-                        autoRotateSpeed={0.1}
+                        autoRotateSpeed={0.4}
                         enableZoom={false}
                     ></OrbitControls>
                 </Canvas>

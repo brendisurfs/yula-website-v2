@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Show } from "../pages/schedule";
-import { Center, Flex, Text } from "@chakra-ui/react";
+import { Box, Center, Flex, Text } from "@chakra-ui/react";
 
 interface EvtType {
     evt: Show;
@@ -14,30 +14,38 @@ export default function EventItem({ evt }: EvtType) {
     console.log(dateYear, dateMonth, dateDay);
 
     return (
-        <a href="/">
-            <Center>
-                <Flex
-                    width="85%"
-                    justifyContent="space-between"
-                    boxShadow="-1px 0 "
-                    background="black"
-                    color="ivory"
-                    p={4}
-                    m={1}
-                    className={evt.Show_Title}
-                >
-                    <Flex flexDir="column" className="left-event-stack">
-                        <Text color="orange" fontSize={24} fontWeight="bold">
-                            {evt.Show_Title}
-                        </Text>
-                        <p>{evt.show_location}</p>
-                    </Flex>
-                    {/* dates go here */}
+        <Box className="event-card" backgroundColor="rgb(24,24,24)">
+            <a target="_blank" href={evt.Show_Link ? evt.Show_Link : "/"}>
+                <Center background="rgb(4,4,4)">
                     <Flex
-                        padding={4}
-                    >{`${dateDay} | ${dateMonth} | ${dateYear}`}</Flex>
-                </Flex>
-            </Center>
-        </a>
+                        background="rgb(10,10,10)"
+                        width="85%"
+                        justifyContent="space-between"
+                        boxShadow="-1px 0 "
+                        color="ivory"
+                        p={7}
+                        m={1}
+                        className={evt.Show_Title}
+                        _hover={{ bg: "rgb(20,20,20)" }}
+                    >
+                        <Flex flexDir="column" className="left-event-stack">
+                            <Text
+                                color="orange"
+                                fontSize={38}
+                                fontWeight="bold"
+                            >
+                                {evt.Show_Title}
+                            </Text>
+                            <p>{evt.show_location}</p>
+                        </Flex>
+                        {/* dates go here */}
+                        <Flex
+                            padding={4}
+                            fontSize={24}
+                        >{`${dateDay} | ${dateMonth} | ${dateYear}`}</Flex>
+                    </Flex>
+                </Center>
+            </a>
+        </Box>
     );
 }

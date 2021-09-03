@@ -28,7 +28,7 @@ function ContactPage({ contactObj }: ContactJSON) {
     return (
         <Layout>
             <Center background="black" h="50vh" color="white">
-                <VStack textAlign="center">
+                <VStack boxShadow="-1px 0" p={4} textAlign="center">
                     <Box className="brand" fontWeight="bold" fontSize="36px">
                         {contactObj.name}
                     </Box>
@@ -45,7 +45,6 @@ function ContactPage({ contactObj }: ContactJSON) {
 export const getStaticProps: GetStaticProps = async () => {
     const response = await fetch("http://localhost:1337/contact");
     const contactObj: ContactType = await response.json();
-    console.log(contactObj);
 
     return {
         props: {
