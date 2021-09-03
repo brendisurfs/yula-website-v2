@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, List, ListItem } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, List, ListItem } from "@chakra-ui/react";
 import { GetStaticProps } from "next";
 
 //COMPONENTs
@@ -9,10 +9,11 @@ import EventItem from "../components/EventItem";
 
 export type Show = {
     id: number;
-    Show_Dates: string;
-    Show_Desc: string;
+    Show_Date: string;
     Show_Title: string;
-    show_link?: string;
+    Show_Desc: string;
+    Show_Link?: string;
+    show_location?: string;
     published_at?: string;
     created_at?: string;
     updated_at?: string;
@@ -24,7 +25,7 @@ type EventMap = {
 
 const SchedulePage = ({ events }: EventMap) => {
     events.map((show: Show) => {
-        console.log(show.Show_Title);
+        console.log(show.Show_Date);
     });
     return (
         <Layout>
@@ -46,6 +47,7 @@ const SchedulePage = ({ events }: EventMap) => {
 export const getStaticProps: GetStaticProps = async () => {
     const res: Response = await fetch("http://localhost:1337/shows");
     const events: Show[] = await res.json();
+
     return {
         props: {
             events,

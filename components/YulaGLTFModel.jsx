@@ -13,7 +13,7 @@ export default function Model(props) {
         <group ref={group} {...props} dispose={null}>
             <mesh
                 scale={5}
-                rotation={[0, 1, 0]}
+                rotation={[0, 0, 0]}
                 geometry={nodes.geo1.geometry}
                 material={materials.gltf_yula_shiny}
             />

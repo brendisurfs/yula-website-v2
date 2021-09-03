@@ -1,38 +1,39 @@
+@import url("/node_modules/@fortawesome/fontawesome-free/css/brands.css");
 html,
 body {
-  background: rgb(12, 12, 12);
-  padding: 1;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background: black;
+    background: rgb(12, 12, 12);
+    padding: 1;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: black;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .link-hover:hover {
-  box-shadow: -1px 0 solid black;
+    box-shadow: -1px 0 solid black;
 }
 
 @media screen and (min-width: 680px) {
-  .mobile-menu {
-    display: none;
-  }
+    .mobile-menu {
+        display: none;
+    }
 }
 @media screen and (max-width: 680px) {
-  .desktop-menu {
-    display: none;
-  }
+    .desktop-menu {
+        display: none;
+    }
 }
 
 .page-link:hover {
-  transition: ease-in 0.3s;
-  color: orange;
+    transition: ease-in 0.3s;
+    color: orange;
 }
