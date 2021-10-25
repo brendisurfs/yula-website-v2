@@ -15,7 +15,11 @@ export default function EventItem({ evt }: EvtType) {
 
     return (
         <Box className="event-card" backgroundColor="rgb(24,24,24)">
-            <a target="_blank" href={evt.Show_Link ? evt.Show_Link : "/"}>
+            <a
+                target="_blank"
+                rel="noreferrer"
+                href={evt.Show_Link ? evt.Show_Link : "/"}
+            >
                 <Center background="rgb(4,4,4)">
                     <Flex
                         background="rgb(10,10,10)"
