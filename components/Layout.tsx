@@ -17,7 +17,9 @@ const Layout = ({ title, description, keywords, children }: DefaultProps) => {
     <div>
       <Head>
         <link rel="favicon" href="/public/favicon.ico" />
-        <title>Yula Music</title>
+        <title>{title}</title>
+        <meta title="description" content={description} />
+        <meta title="created by Brendan Prednis" content="brendancreates.dev" />
       </Head>
 
       <AdaptiveNavbar />

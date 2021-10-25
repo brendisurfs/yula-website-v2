@@ -1,0 +1,206 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Houdini GLTF 2.0 Exporter"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5121,
+            "count": 6,
+            "type": "SCALAR",
+            "min": [0],
+            "max": [3]
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 4,
+            "type": "VEC3",
+            "min": [-2, 0, -2],
+            "max": [2, 0, 2]
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5123,
+            "count": 132,
+            "type": "SCALAR",
+            "min": [0],
+            "max": [131]
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5126,
+            "count": 132,
+            "type": "VEC3",
+            "min": [-0.5, 0, -0.725000024],
+            "max": [0.5, 1.59383464, -0.475000024]
+        },
+        {
+            "bufferView": 4,
+            "componentType": 5126,
+            "count": 132,
+            "type": "VEC3",
+            "min": [-0.875579536, -0.875578821, -0.875581145],
+            "max": [0.875579536, 0.875577092, 0.875579536]
+        },
+        {
+            "bufferView": 5,
+            "componentType": 5123,
+            "count": 1200,
+            "type": "SCALAR",
+            "min": [0],
+            "max": [1199]
+        },
+        {
+            "bufferView": 6,
+            "componentType": 5126,
+            "count": 1200,
+            "type": "VEC3",
+            "min": [-1.01036906, 1.98963094, -1.60837543],
+            "max": [1.01036906, 2.01036906, 0.408375263]
+        },
+        {
+            "bufferView": 7,
+            "componentType": 5126,
+            "count": 1200,
+            "type": "VEC3",
+            "min": [-1, -0.99960053, -0.998026848],
+            "max": [1, 0.99960053, 0.998026848]
+        }
+    ],
+    "buffers": [
+        {
+            "uri": "test-gltf-scene_data.bin",
+            "byteLength": 34688,
+            "name": "main_buffer"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 6,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 8,
+            "byteLength": 48,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 56,
+            "byteLength": 264,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 320,
+            "byteLength": 1584,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 1904,
+            "byteLength": 1584,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 3488,
+            "byteLength": 2400,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 5888,
+            "byteLength": 14400,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 20288,
+            "byteLength": 14400,
+            "target": 34962
+        }
+    ],
+    "nodes": [
+        {
+            "children": [1, 2, 3],
+            "name": "Root"
+        },
+        {
+            "name": "ground_shiny",
+            "mesh": 0
+        },
+        {
+            "name": "box1",
+            "mesh": 1
+        },
+        {
+            "name": "top_ring_light",
+            "mesh": 2
+        }
+    ],
+    "meshes": [
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 1
+                    },
+                    "indices": 0,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 4,
+                        "POSITION": 3
+                    },
+                    "indices": 2
+                }
+            ]
+        },
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 7,
+                        "POSITION": 6
+                    },
+                    "indices": 5,
+                    "material": 1
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "metallic_reflect",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [0.5, 0.5, 0.5, 1],
+                "roughnessFactor": 0.300000012
+            }
+        },
+        {
+            "name": "emis",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [0.200000003, 0.200000003, 0.200000003, 1],
+                "metallicFactor": 0,
+                "roughnessFactor": 0.300000012
+            },
+            "emissiveFactor": [1, 1, 1]
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [0]
+        }
+    ],
+    "scene": 0
+}
