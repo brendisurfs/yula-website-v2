@@ -32,7 +32,7 @@ const SchedulePage = ({ events }: EventMap) => {
                     gridTemplateRows="repeat(4,1fr)"
                     alignItems="center"
                 >
-                    {events.map((show: Show) => (
+                    {events.reverse().map((show: Show) => (
                         <EventItem evt={show} key={show.id}></EventItem>
                     ))}
                 </Grid>
