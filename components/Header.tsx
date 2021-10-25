@@ -23,7 +23,7 @@ const Header = () => {
                 <Heading
                     backgroundColor="black"
                     color="ivory"
-                    p={6}
+                    p={2}
                     m={0}
                     title="yula"
                 >
@@ -44,7 +44,7 @@ const Header = () => {
                         </Grid>
                         <div className="right">
                             <Grid
-                                p={2}
+                                p={1}
                                 alignItems="center"
                                 textAlign="center"
                                 // gridTemplateColumns="repeat(4,1fr)"

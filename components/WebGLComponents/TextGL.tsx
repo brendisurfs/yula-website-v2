@@ -1,12 +1,4 @@
-import {
-    Stage,
-    PerspectiveCamera,
-    Plane,
-    Text,
-    OrbitControls,
-    Reflector,
-    Stars,
-} from "@react-three/drei";
+import { Text, OrbitControls, Stars } from "@react-three/drei";
 import React, { ReactElement } from "react";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
@@ -38,13 +30,11 @@ function TextGL({ children }: ReactChildType) {
                 textAlign={"left"}
                 color="white"
                 scale={0.02}
-                // anchorX="center"
-                // anchorY="middle"
             >
                 {children}
             </Text>
 
-            <Stars radius={100} saturation={0.5} count={3000} />
+            <Stars radius={100} saturation={1.0} count={1000} />
             <OrbitControls
                 minPolarAngle={Math.PI / 2.5}
                 maxPolarAngle={Math.PI / 1.7}
@@ -66,7 +56,7 @@ function TextGL({ children }: ReactChildType) {
                 {/* <ChromaticAberration offset={chromaOffset} /> */}
                 <Bloom
                     luminanceThreshold={0.01}
-                    luminanceSmoothing={1}
+                    luminanceSmoothing={3}
                     height={800}
                     opacity={0.3}
                 />

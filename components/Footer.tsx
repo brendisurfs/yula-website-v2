@@ -31,6 +31,7 @@ const Footer = () => {
                     <GridItem>
                         <a
                             target="_blank"
+                            rel="noreferrer"
                             key="Instagram"
                             href={socials.instagram}
                         >
@@ -48,7 +49,11 @@ const Footer = () => {
                     </GridItem>
                     <GridItem>
                         {/* TIK TOK */}
-                        <a target="_blank" href={socials.tiktok}>
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href={socials.tiktok}
+                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 aria-hidden="true"
@@ -67,7 +72,11 @@ const Footer = () => {
                     </GridItem>
                     {/* TWITTER */}
                     <GridItem>
-                        <a target="_blank" href={socials.twitter}>
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href={socials.twitter}
+                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="16"
@@ -81,7 +90,7 @@ const Footer = () => {
                         </a>
                     </GridItem>
                     {/* YOUTUBE */}
-                    <a target="_blank" href={socials.youtube}>
+                    <a target="_blank" rel="noreferrer" href={socials.youtube}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"

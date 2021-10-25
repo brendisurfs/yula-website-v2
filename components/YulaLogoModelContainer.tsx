@@ -50,11 +50,11 @@ const YulaLogoModelContainer = () => {
                     <color attach="background" args={["black"]} />
                     <fog color={tjsc} attach="fog" near={8} far={30} />
                     <pointLight
-                        intensity={4}
+                        intensity={10}
                         color="yellow"
                         position={[5, 5, 5]}
                     />
-                    <rectAreaLight position={[1.3, 1, 0.8]} />
+                    <rectAreaLight intensity={10} position={[1.3, 1, 0.8]} />
 
                     <Suspense fallback={<Html>Loading</Html>}>
                         <Model />
