@@ -1,3 +1,4 @@
+import env from "react-dotenv";
 import { Box, Flex, Grid, GridItem, List, ListItem } from "@chakra-ui/react";
 import { GetStaticProps } from "next";
 
@@ -42,7 +43,7 @@ const SchedulePage = ({ events }: EventMap) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-    const res: Response = await fetch("http://localhost:1337/shows");
+    const res: Response = await fetch(`${env.YULA_URL}/shows`);
     const events: Show[] = await res.json();
 
     return {
