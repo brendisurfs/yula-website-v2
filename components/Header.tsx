@@ -30,13 +30,14 @@ const Header = () => {
                 <Heading
                     backgroundColor="black"
                     color="ivory"
-                    p={3}
+                    p={4}
                     m={0}
                     title="yula"
                 >
                     <Flex justifyContent="space-between">
                         <Grid
-                            alignItems="center"
+                            // if I want the logo to line up again, this is it right here.
+                            // alignItems="center"
                             textAlign="center"
                             textTransform="uppercase"
                             gridTemplateColumns="repeat(5, 1fr)"
@@ -46,7 +47,8 @@ const Header = () => {
                         >
                             {/* BRAND */}
                             <div className="page-link">
-                                <YulaSVG scale={64} />
+                                {/* <YulaSVG scale={64} /> */}
+                                <Link href="/">Yula</Link>
                             </div>
                             {/* END BRAND */}
                         </Grid>

@@ -25,7 +25,8 @@ const HeaderMobile = () => {
                     fontWeight="bold"
                 >
                     <Link href="/">
-                        <YulaSVG scale={64} />
+                        <Link href="/">Yula</Link>
+                        {/* <YulaSVG scale={64} /> */}
                     </Link>
                 </Grid>
                 <div className="right">

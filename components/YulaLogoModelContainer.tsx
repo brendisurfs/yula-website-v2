@@ -17,7 +17,6 @@ import {
     Vignette,
     ChromaticAberration,
 } from "@react-three/postprocessing";
-import { Vector3 } from "three";
 
 const tjsc = new THREE.Color("#010101");
 const chromaOffset = new THREE.Vector2(0.0007, 0.0015);
@@ -42,7 +41,8 @@ const YulaLogoModelContainer = () => {
                 <Canvas
                     gl={{ alpha: false, antialias: true }}
                     style={{
-                        height: " 100vh",
+                        minHeight: "90vh",
+                        height: " 100%",
                         width: "100%",
                         background: "black",
                     }}
@@ -51,7 +51,7 @@ const YulaLogoModelContainer = () => {
                     <fog color={tjsc} attach="fog" near={8} far={30} />
                     <pointLight
                         intensity={10}
-                        color="yellow"
+                        color="#D7A52A"
                         position={[5, 5, 5]}
                     />
                     <rectAreaLight intensity={10} position={[1.3, 1, 0.8]} />
@@ -69,7 +69,7 @@ const YulaLogoModelContainer = () => {
                             opacity={0.3}
                         />
                         <Stars radius={100} saturation={1} count={3000} />
-                        <Vignette eskil={false} offset={0} darkness={1.4} />
+                        {/* <Vignette eskil={false} offset={0} darkness={1.4} /> */}
                     </EffectComposer>
 
                     <OrbitControls
