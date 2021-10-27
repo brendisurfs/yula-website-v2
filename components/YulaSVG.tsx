@@ -5,7 +5,7 @@ function changeToPointer() {}
 export default function YulaSVG({ scale }) {
     let stringScale = String(scale);
     return (
-        <Link href="/">
+        <Link href="/" passHref={true}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="100px"
