@@ -46,11 +46,7 @@ const Header = () => {
                         >
                             {/* BRAND */}
                             <div className="page-link">
-                                <Link href="/">
-                                    <a href="/">
-                                        <YulaSVG scale={64} />
-                                    </a>
-                                </Link>
+                                <YulaSVG scale={64} />
                             </div>
                             {/* END BRAND */}
                         </Grid>
