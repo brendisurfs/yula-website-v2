@@ -1,18 +1,23 @@
+import Link from "next/link";
+
+function changeToPointer() {}
+
 export default function YulaSVG({ scale }) {
     let stringScale = String(scale);
     return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="100px"
-            height="100px"
-            viewBox="0 0 512 512"
-        >
-            <path
-                id="Selection"
-                fill="white"
-                stroke="white"
-                strokeWidth="1"
-                d="M 232.00,0.21
+        <Link href="/">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100px"
+                height="100px"
+                viewBox="0 0 512 512"
+            >
+                <path
+                    id="Selection"
+                    fill="white"
+                    stroke="white"
+                    strokeWidth="1"
+                    d="M 232.00,0.21
            C 232.00,0.21 272.00,0.21 272.00,0.21
              298.35,0.04 334.82,10.29 359.00,20.72
              386.03,32.38 412.16,49.16 433.00,70.00
@@ -117,7 +122,8 @@ export default function YulaSVG({ scale }) {
              472.05,346.44 468.50,341.91 466.42,339.00
              466.42,339.00 453.42,321.00 453.42,321.00
              453.42,321.00 405.00,252.00 405.00,252.00 Z"
-            />
-        </svg>
+                />
+            </svg>
+        </Link>
     );
 }
