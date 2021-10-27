@@ -14,7 +14,7 @@ import {
 import Link from "next/link";
 import PageLink from "./PageLink";
 const SideMenu = () => {
-    const linkTabs = ["home", "music", "schedule", "about", "contact"];
+    const linkTabs = ["music", "schedule", "about", "contact"];
 
     let count = 0;
     return (

@@ -17,6 +17,7 @@ import {
     Vignette,
     ChromaticAberration,
 } from "@react-three/postprocessing";
+import { Camera } from "three";
 
 const tjsc = new THREE.Color("#010101");
 const chromaOffset = new THREE.Vector2(0.0007, 0.0015);
