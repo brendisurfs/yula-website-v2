@@ -28,9 +28,12 @@ const SchedulePage = ({ events }: EventMap) => {
         <Layout>
             <Box background="black" alignItems="center">
                 <Grid
-                    p={16}
+                    p={2}
+                    paddingTop={12}
                     gridTemplateRows="repeat(4,1fr)"
                     alignItems="center"
+                    textAlign="center"
+                    width="100%"
                 >
                     {events.reverse().map((show: Show) => (
                         <EventItem evt={show} key={show.id}></EventItem>
