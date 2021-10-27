@@ -1,11 +1,18 @@
-import { useDisclosure, Button, Flex, Heading, Grid } from "@chakra-ui/react";
+import {
+    useDisclosure,
+    Button,
+    Flex,
+    Image,
+    Heading,
+    Grid,
+} from "@chakra-ui/react";
 import Link from "next/link";
-
 //CUSTOM COMPONENTS:
 //	|
 //	v
 import PageLink from "./PageLink";
 import LoginCard from "./LoginCard";
+import YulaSVG from "./YulaSVG";
 
 const Header = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -23,7 +30,7 @@ const Header = () => {
                 <Heading
                     backgroundColor="black"
                     color="ivory"
-                    p={2}
+                    p={3}
                     m={0}
                     title="yula"
                 >
@@ -37,10 +44,15 @@ const Header = () => {
                             left={0}
                             fontSize={52}
                         >
+                            {/* BRAND */}
                             <div className="page-link">
-                                <Link href="/">Yula</Link>
+                                <Link href="/">
+                                    <a href="/">
+                                        <YulaSVG scale={64} />
+                                    </a>
+                                </Link>
                             </div>
-                            {/* <p>|</p> */}
+                            {/* END BRAND */}
                         </Grid>
                         <div className="right">
                             <Grid
@@ -67,15 +79,6 @@ const Header = () => {
                                     text="Contact"
                                 ></PageLink>
                             </Grid>
-                            {/* <Button
-                onClick={onOpen}
-                rounded={0}
-                variant="normal"
-                // backgroundColor="blue"
-                // fontWeight="light"
-              >
-                Log In
-              </Button> */}
                         </div>
                     </Flex>
                 </Heading>

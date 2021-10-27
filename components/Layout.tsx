@@ -6,33 +6,36 @@ import { ReactElement } from "react";
 
 // DefaultProps Interface - handles our types for our layouts props.
 interface DefaultProps {
-  title: string;
-  description: string;
-  keywords: string;
-  children: ReactElement | ReactElement[];
+    title: string;
+    description: string;
+    keywords: string;
+    children: ReactElement | ReactElement[];
 }
 
 const Layout = ({ title, description, keywords, children }: DefaultProps) => {
-  return (
-    <div>
-      <Head>
-        <link rel="favicon" href="/public/favicon.ico" />
-        <title>{title}</title>
-        <meta title="description" content={description} />
-        <meta title="created by Brendan Prednis" content="brendancreates.dev" />
-      </Head>
+    return (
+        <div>
+            <Head>
+                <link rel="shortcut icon" href="public/favicon.ico" />
+                <title>{title}</title>
+                <meta title="description" content={description} />
+                <meta
+                    title="created by Brendan Prednis"
+                    content="brendancreates.dev"
+                />
+            </Head>
 
-      <AdaptiveNavbar />
-      {children}
-      <Footer />
-    </div>
-  );
+            <AdaptiveNavbar />
+            {children}
+            <Footer />
+        </div>
+    );
 };
 
 Layout.defaultProps = {
-  title: "Yula | The official website for electronic musician Yula.",
-  description: "the center for all things Yula.",
-  keywords: "music, electronic, edm, Yula, dj",
+    title: "Yula | The official website for electronic musician Yula.",
+    description: "the center for all things Yula.",
+    keywords: "music, electronic, Yula, space, electronic-music",
 };
 
 export default Layout;
