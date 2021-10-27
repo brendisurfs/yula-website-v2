@@ -15,11 +15,7 @@ export default function EventItem({ evt }: EvtType) {
 
     return (
         <Box className="event-card" backgroundColor="rgb(24,24,24)">
-            <a
-                target="_blank"
-                rel="noreferrer"
-                href={evt.Show_Link ? evt.Show_Link : "/"}
-            >
+            <a target="_blank" rel="noreferrer" href={evt.Show_Link}>
                 <Center background="rgb(4,4,4)">
                     <Flex
                         background="rgb(10,10,10)"
@@ -29,7 +25,7 @@ export default function EventItem({ evt }: EvtType) {
                         color="ivory"
                         p={7}
                         m={1}
-                        className={evt.Show_Title}
+                        className={evt.Show_Title ? evt.Show_Title : "/"}
                         _hover={{ bg: "rgb(20,20,20)" }}
                     >
                         <Flex flexDir="column" className="left-event-stack">
