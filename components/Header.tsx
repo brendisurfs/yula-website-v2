@@ -13,6 +13,7 @@ import Link from "next/link";
 import PageLink from "./PageLink";
 import LoginCard from "./LoginCard";
 import YulaSVG from "./YulaSVG";
+import { YulaFontSVG } from "./YulaLogoFontSVG";
 
 const Header = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -48,7 +49,7 @@ const Header = () => {
                             {/* BRAND */}
                             <div className="page-link">
                                 {/* <YulaSVG scale={64} /> */}
-                                <Link href="/">Yula</Link>
+                                <YulaFontSVG />
                             </div>
                             {/* END BRAND */}
                         </Grid>

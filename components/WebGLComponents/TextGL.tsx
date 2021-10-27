@@ -25,11 +25,11 @@ function TextGL({ children }: ReactChildType) {
             <Text
                 fontSize={12}
                 maxWidth={260}
-                lineHeight={1}
+                lineHeight={2}
                 letterSpacing={0.04}
                 textAlign={"left"}
                 color="white"
-                scale={0.02}
+                scale={0.012}
             >
                 {children}
             </Text>
