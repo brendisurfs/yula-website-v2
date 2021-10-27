@@ -10,6 +10,9 @@ import { GetStaticProps } from "next";
 import Layout from "../components/Layout";
 import TextSection from "../components/TextSection";
 
+// ENV
+import { API_URL } from "../stores";
+
 interface ContactType {
     id: number;
     name: string;
@@ -43,7 +46,7 @@ function ContactPage({ contactObj }: ContactJSON) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const response = await fetch("http://localhost:1337/contact");
+    const response = await fetch(`${API_URL}/contact`);
     const contactObj: ContactType = await response.json();
 
     return {

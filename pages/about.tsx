@@ -6,6 +6,10 @@ import TextGL from "../components/WebGLComponents/TextGL";
 import Model from "../components/WebGLComponents/webgl_deps/Test-gltf-scene";
 import { Canvas } from "@react-three/fiber";
 import { PointLight } from "three";
+
+// API CONFIG
+import { API_URL } from "../stores";
+
 interface AboutType {
     id: number;
     About: string;
@@ -67,17 +71,22 @@ const AboutPage = ({ aboutInfo }: Info, { pics }) => {
 {
     /* </Layout> */
 }
+
+//GET API TO LOAD STATIC PROPS
+//	|
+//	v
+// NOTE: will add pictures later.
 export const getStaticProps: GetStaticProps = async () => {
-    const aboutResponse: Response = await fetch("http://localhost:1337/about");
-    const pictureResponse: Response = await fetch(
-        "http://localhost:1337/picture"
-    );
+    const aboutResponse: Response = await fetch(`${API_URL}/about`);
+    // const pictureResponse: Response = await fetch(
+    //     "http://localhost:1337/picture"
+    // );
     const aboutInfo: AboutType = await aboutResponse.json();
-    const pics = await pictureResponse.json();
+    // const pics = await pictureResponse.json();
     return {
         props: {
             aboutInfo,
-            pics,
+            // pics,
         },
     };
 };
