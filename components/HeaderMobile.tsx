@@ -1,6 +1,6 @@
 import { Flex, Grid, Image } from "@chakra-ui/react";
 import Link from "next/link";
-import SideMenu from "../SideMenu";
+import SideMenu from "./SideMenu";
 import { YulaFontSVG } from "./YulaLogoFontSVG";
 import YulaSVG from "./YulaSVG";
 const HeaderMobile = () => {
