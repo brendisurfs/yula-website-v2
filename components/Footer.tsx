@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 
-import { socials } from "./stores";
+import { socials } from "../stores";
 const Footer = () => {
     return (
         <ChakraProvider>

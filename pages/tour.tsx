@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, List, ListItem } from "@chakra-ui/react";
+import { Box, Grid } from "@chakra-ui/react";
 import { GetStaticProps } from "next";
 import { API_URL } from "../stores";
 //COMPONENTs
@@ -35,7 +35,7 @@ const SchedulePage = ({ events }: EventMap) => {
                     textAlign="center"
                     width="100%"
                 >
-                    {events.reverse().map((show: Show) => (
+                    {events.map((show: Show) => (
                         <EventItem evt={show} key={show.id}></EventItem>
                     ))}
                 </Grid>
@@ -44,9 +44,12 @@ const SchedulePage = ({ events }: EventMap) => {
     );
 };
 
+// TODO: CHECK WHY ARRAY.REVERSE() wont work, this is super annoying.
 export const getStaticProps: GetStaticProps = async () => {
     const res: Response = await fetch(`${API_URL}/shows`);
     const events: Show[] = await res.json();
+
+    events.reverse();
 
     return {
         props: {
