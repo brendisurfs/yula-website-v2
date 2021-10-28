@@ -25,7 +25,7 @@ const HeaderMobile = () => {
                     left={0}
                     fontWeight="bold"
                 >
-                    <Link href="/">
+                    <Link passHref href="/">
                         <YulaFontSVG />
                         {/* <YulaSVG scale={64} /> */}
                     </Link>
