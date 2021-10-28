@@ -10,7 +10,9 @@ import Link from "next/link";
 const SideMenu = () => {
     const linkTabs = ["music", "tour", "about", "contact"];
 
+    // iterators
     let count = 0;
+    let linkCount = 0;
 
     return (
         <div>
@@ -30,7 +32,7 @@ const SideMenu = () => {
                     borderColor="rgb(24,24,24)"
                 >
                     {linkTabs.map((item) => (
-                        <Link passHref href={`/${item}`}>
+                        <Link key={(linkCount += 1)} passHref href={`/${item}`}>
                             <MenuItem
                                 fontSize={24}
                                 key={(count += 1)}
