@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Show } from "../pages/schedule";
+import { Show } from "../pages/tour";
 import { Box, Center, Flex, Text } from "@chakra-ui/react";
 
 interface EvtType {

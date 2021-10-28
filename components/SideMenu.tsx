@@ -14,8 +14,7 @@ import {
 import Link from "next/link";
 import PageLink from "./PageLink";
 const SideMenu = () => {
-    const linkTabs = ["music", "schedule", "about", "contact"];
-
+    const linkTabs = ["music", "tour", "about", "contact"];
     let count = 0;
     return (
         <div>
@@ -30,19 +29,22 @@ const SideMenu = () => {
                 />
                 <MenuList
                     borderRadius={0}
-                    alignItems="right"
+                    alignItems="center"
                     backgroundColor="rgb(24,24,24)"
                     borderColor="rgb(24,24,24)"
                 >
                     {linkTabs.map((item) => (
-                        <MenuItem
-                            fontWeight="hairline"
-                            fontSize={18}
-                            key={(count += 1)}
-                            _focus={{ color: "orange" }}
-                        >
-                            <Link href={`/${item}`}>{item}</Link>
-                        </MenuItem>
+                        <Link href={`/${item}`}>
+                            <MenuItem
+                                // fontWeight="hairline"
+                                fontSize={24}
+                                key={(count += 1)}
+                                _focus={{ color: "orange" }}
+                                width="100%"
+                            >
+                                {item}
+                            </MenuItem>
+                        </Link>
                     ))}
                 </MenuList>
             </Menu>

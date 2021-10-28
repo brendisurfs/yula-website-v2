@@ -6,13 +6,11 @@ import {
     Heading,
     Grid,
 } from "@chakra-ui/react";
-import Link from "next/link";
 //CUSTOM COMPONENTS:
 //	|
 //	v
 import PageLink from "./PageLink";
 import LoginCard from "./LoginCard";
-import YulaSVG from "./YulaSVG";
 import { YulaFontSVG } from "./YulaLogoFontSVG";
 
 const Header = () => {
@@ -57,7 +55,7 @@ const Header = () => {
                             <Grid
                                 p={1}
                                 alignItems="center"
-                                textAlign="center"
+                                textAlign="right"
                                 // gridTemplateColumns="repeat(4,1fr)"
                                 justifySelf="space-around"
                             >
@@ -66,8 +64,8 @@ const Header = () => {
                                     text="Music"
                                 ></PageLink>
                                 <PageLink
-                                    pageRoute="/schedule"
-                                    text="Schedule"
+                                    pageRoute="/tour"
+                                    text="Tour"
                                 ></PageLink>
                                 <PageLink
                                     pageRoute="/about"
