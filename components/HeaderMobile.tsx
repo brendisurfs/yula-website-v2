@@ -1,8 +1,8 @@
 import { Flex, Grid, Image } from "@chakra-ui/react";
 import Link from "next/link";
 import SideMenu from "./SideMenu";
-import { YulaFontSVG } from "./YulaLogoFontSVG";
-import YulaSVG from "./YulaSVG";
+import YulaFontSVG from "./YulaLogoFontSVG";
+
 const HeaderMobile = () => {
     return (
         <div className="mobile-menu ">
@@ -25,9 +25,8 @@ const HeaderMobile = () => {
                     left={0}
                     fontWeight="bold"
                 >
-                    <Link href="/">
+                    <Link passHref href="/">
                         <YulaFontSVG />
-                        {/* <YulaSVG scale={64} /> */}
                     </Link>
                 </Grid>
                 <div className="right">

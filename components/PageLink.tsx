@@ -11,13 +11,14 @@ const PageLink = (props: LinkProps) => {
     return (
         <div className="page-link">
             <Box
-                color="white"
                 _focus={{ color: "orange" }}
                 fontWeight="hairline"
                 textTransform="uppercase"
                 fontSize="20"
             >
-                <Link href={props.pageRoute}>{props.text}</Link>
+                <Link passHref href={props.pageRoute}>
+                    {props.text}
+                </Link>
             </Box>
         </div>
     );

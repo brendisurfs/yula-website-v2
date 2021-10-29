@@ -8,7 +8,7 @@ function MusicPage() {
     return (
         <Layout>
             <Box background={"black"} color={"white"} textAlign={"center"}>
-                music coming soon
+                music page coming soon
             </Box>
         </Layout>
     );

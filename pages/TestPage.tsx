@@ -1,7 +1,6 @@
 import Model from "../components/WebGLComponents/webgl_deps/Test-gltf-scene";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import * as THREE from "three";
 import Layout from "../components/Layout";
 function TestPage() {
     return (

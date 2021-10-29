@@ -11,7 +11,7 @@ import {
 //	v
 import PageLink from "./PageLink";
 import LoginCard from "./LoginCard";
-import { YulaFontSVG } from "./YulaLogoFontSVG";
+import YulaFontSVG from "./YulaLogoFontSVG";
 
 const Header = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -26,13 +26,7 @@ const Header = () => {
 
             {/* HEADER DISPLAY STARTS HERE */}
             <div className="desktop-menu">
-                <Heading
-                    backgroundColor="black"
-                    color="ivory"
-                    p={4}
-                    m={0}
-                    title="yula"
-                >
+                <Heading backgroundColor="black" p={4} m={0} title="yula">
                     <Flex justifyContent="space-between">
                         <Grid
                             // if I want the logo to line up again, this is it right here.
@@ -53,9 +47,14 @@ const Header = () => {
                         </Grid>
                         <div className="right">
                             <Grid
+                                color="white"
                                 p={1}
                                 alignItems="center"
                                 textAlign="right"
+                                //NOTE
+                                //	|
+                                //	v
+                                // reload this is you want a long layout
                                 // gridTemplateColumns="repeat(4,1fr)"
                                 justifySelf="space-around"
                             >
