@@ -11,7 +11,6 @@ const PageLink = (props: LinkProps) => {
     return (
         <div className="page-link">
             <Box
-                color="white"
                 _focus={{ color: "orange" }}
                 fontWeight="hairline"
                 textTransform="uppercase"

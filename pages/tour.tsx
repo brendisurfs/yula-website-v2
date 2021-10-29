@@ -32,7 +32,7 @@ const SchedulePage = ({ events }: EventMap) => {
                     paddingTop={12}
                     gridTemplateRows="repeat(4,1fr)"
                     alignItems="center"
-                    textAlign="center"
+                    textAlign="left"
                     width="100%"
                 >
                     {events.map((show: Show) => (

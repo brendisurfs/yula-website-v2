@@ -1,7 +1,7 @@
 import Link from "next/link";
-export const YulaFontSVG = () => {
+function YulaFontSVG() {
     return (
-        <Link passHref href="/">
+        <Link href="/">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="3in"
@@ -11,6 +11,7 @@ export const YulaFontSVG = () => {
                 <path
                     id="Selection"
                     fill="white"
+                    onFocus={() => "orange"}
                     stroke="white"
                     strokeWidth="1"
                     d="M 2329.00,1237.00
@@ -108,4 +109,6 @@ export const YulaFontSVG = () => {
             </svg>
         </Link>
     );
-};
+}
+
+export default YulaFontSVG;
