@@ -51,7 +51,7 @@ function MusicPage() {
                     width="100%"
                 >
                     {musicTabs.map((music: IMusicProps) => (
-                        <MusicCard {...music} />
+                        <MusicCard key={music.songTitle} {...music} />
                     ))}
                 </Grid>
             </Box>
