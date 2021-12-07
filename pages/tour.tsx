@@ -47,10 +47,8 @@ const SchedulePage = ({ events }: EventMap) => {
 // TODO: CHECK WHY ARRAY.REVERSE() wont work, this is super annoying.
 export const getStaticProps: GetStaticProps = async () => {
     const res: Response = await fetch(`${API_URL}/shows`);
-    const events: Show[] = await res.json();
-
-    events.reverse();
-
+    let events: Show[] = await res.json();
+    events = events.reverse();
     return {
         props: {
             events,
