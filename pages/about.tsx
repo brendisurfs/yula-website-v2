@@ -1,8 +1,7 @@
-import { VStack, Text, Image, Flex } from "@chakra-ui/react";
+import { Text, Image, Flex } from "@chakra-ui/react";
 import _Layout from "../components/Layout";
 import Layout from "../components/Layout";
 import { GetStaticProps } from "next";
-import TextGL from "../components/WebGLComponents/TextGL";
 
 // API CONFIG
 import { API_URL } from "../stores";
