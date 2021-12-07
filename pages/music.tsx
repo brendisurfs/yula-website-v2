@@ -12,7 +12,8 @@ export interface IMusicProps {
 const musicTabs: IMusicProps[] = [
     {
         songTitle: "Everything You Feel",
-        songLink: "urlhere",
+        songLink:
+            "https://open.spotify.com/track/7r4cZWIXy6ChgO9arBIfGA?si=564874bd3abc4094",
         songImageURL:
             "https://i.scdn.co/image/ab67616d00001e0235547783541b0e0ef45490af",
         artistTitle: "Yula",
