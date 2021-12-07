@@ -1,4 +1,5 @@
 import { Box, Center, Flex, Text } from "@chakra-ui/layout";
+import Image from "next/image";
 import React from "react";
 import { IMusicProps } from "../pages/music";
 
@@ -32,9 +33,10 @@ const MusicCard = ({ ...songInfo }: IMusicProps) => {
                         </Flex>
                         {/* images here */}
                         <Box className="song-image">
-                            <img
+                            <Image
                                 src={songInfo.songImageURL}
-                                alt={songInfo.songTitle}
+                                width={128}
+                                height={128}
                             />
                         </Box>
                     </Flex>
