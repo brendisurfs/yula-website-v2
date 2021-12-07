@@ -6,7 +6,7 @@ import { IMusicProps } from "../pages/music";
 const MusicCard = ({ ...songInfo }: IMusicProps) => {
     return (
         <Box className="event-card" backgroundColor="rgb(24,24,24)">
-            <a target="_blank" rel="noreferrer" href={songInfo.songLink}>
+            <a target="_blank" rel="noreferrer" href={`${songInfo.songLink}`}>
                 <Center background="rgb(4,4,4)">
                     <Flex
                         background="rgb(10,10,10)"
@@ -34,7 +34,8 @@ const MusicCard = ({ ...songInfo }: IMusicProps) => {
                         {/* images here */}
                         <Box className="song-image">
                             <Image
-                                src={songInfo.songImageURL}
+                                src={`${songInfo.songImageURL}`}
+                                alt={songInfo.songTitle}
                                 width={128}
                                 height={128}
                             />
