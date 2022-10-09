@@ -1,0 +1,7 @@
+query AboutQuery {
+  allPages {
+    title
+    subtitle
+    aboutText
+  }
+}
